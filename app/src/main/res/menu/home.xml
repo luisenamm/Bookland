@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navHome"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navScifi"
+            android:icon="@drawable/ic_books"
+            android:title="Sci-Fi"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navSports"
+            android:icon="@drawable/ic_books"
+            android:title="Sports"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navEnglish"
+            android:icon="@drawable/ic_books"
+            android:title="English Literature"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navArtC"
+            android:icon="@drawable/ic_books"
+            android:title="Art and Culture"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navComics"
+            android:icon="@drawable/ic_books"
+            android:title="Comics"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navSelfHelp"
+            android:icon="@drawable/ic_books"
+            android:title="Self Help"/>
+    </group>
+
+    <item android:title="Contact Us">
+        <menu>
+            <item android:id="@+id/nav_map"
+                android:icon="@drawable/ic_location"
+                android:title="Find us"/>
+            <item android:id="@+id/nav_email"
+                android:icon="@drawable/ic_emai"
+                android:title="Email"/>
+        </menu>
+    </item>
+
+
+
+
+
+</menu>
