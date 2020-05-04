@@ -6,11 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -20,10 +19,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar=findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
         drawer=findViewById(R.id.drawer_layout);
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -58,33 +54,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.navScifi:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ScifiFragment()).commit();
+                        new ScifiFragment("scifi")).commit();
                 break;
                 case R.id.navSports:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SportsFragment()).commit();
+                        new SportsFragment("sports")).commit();
                 break;
             case R.id.navEnglish:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EnglishLiteratureFragment()).commit();
+                        new EnglishLiteratureFragment("english")).commit();
                 break;
             case R.id.navArtC:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ArtCultureFragment()).commit();
+                        new ArtCultureFragment("art")).commit();
                 break;
             case R.id.navComics:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ComicsFragment()).commit();
+                        new ComicsFragment("comics")).commit();
                 break;
             case R.id.navSelfHelp:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SelfHelpFragment()).commit();
+                        new SelfHelpFragment("self")).commit();
                 break;
             case  R.id.nav_map:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MapsFragment()).commit();
                 break;
             case R.id.nav_email:
+                Intent myIntent =new Intent(getApplicationContext(),Email.class);
+                startActivity(myIntent);
                 Toast.makeText(getApplicationContext(),"Send", Toast.LENGTH_SHORT).show();
                 break;
 

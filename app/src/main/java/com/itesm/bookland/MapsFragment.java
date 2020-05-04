@@ -47,7 +47,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback{
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
-        LatLng store = new LatLng(-20.6754563, -103.367101621);
+        LatLng store = new LatLng(20.6754563, -103.367101621);
         mMap.addMarker(new MarkerOptions().position(store).title("Marker in the store"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(store));
     }
